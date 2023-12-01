@@ -66,10 +66,12 @@ def main(amigo_oculto_dict: dict, texto: str):
                 By.XPATH,
                 '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div/p/span',
             ).send_keys(Keys.ENTER)
-            time.sleep(15)
+            time.sleep(5) #Ajustar conforme a velocidade da sua internet
 
         except Exception as e:
             print(f'Um erro aconteceu: \n {e}')
+    
+    print('Sorteio realizado com sucesso')
 
 
 if __name__ == '__main__':
@@ -93,3 +95,4 @@ if __name__ == '__main__':
 
     # Chama a função principal para enviar as mensagens no WhatsApp
     main(amigo_oculto_dict=amigo_oculto_familia.sorteio, texto=texto)
+
